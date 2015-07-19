@@ -1,0 +1,8 @@
+.todoDemo{
+	width: 900px;
+}
+
+.done{
+	text-decoration: line-through;
+	color: #AAA;
+}

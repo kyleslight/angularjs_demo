@@ -1,0 +1,19 @@
+<div class="todoDemo" ng-controller="TodoController">
+	<h2>Todo Demo</h2>
+	<form name="frm" class="form-inline">
+		<div class="form-group">
+			<input type="text" class="form-control" name="newTodo" ng-model="newTodo" placeholder="Add a new todo" required>
+		</div>
+		<button class="btn btn-primary" ng-click="addTodo()" ng-disabled="frm.$invalid">Go!</button>
+		<button class="btn btn-primary" ng-click="clearComplete()">Clear Complete!</button>
+	</form>
+
+	<dic class="container">
+		<div class="list-group">
+			<div type="button" ng-class="{'disabled': todo.done}" ng-repeat="todo in todos" class="list-group-item">			
+				<input type="checkbox" ng-model="todo.done">
+				<span ng-class="{'done': todo.done}">{{todo.title}}</span>
+			</div>
+		</div>
+	</dic>
+</div>
