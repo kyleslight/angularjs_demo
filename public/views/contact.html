@@ -1,0 +1,23 @@
+<div class="routeDemo row" ng-controller="ContactController">
+	<h2>Route Demo</h2>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Phone</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="contact in contacts">
+				<th>
+					<a href="/#/detail/{{$index}}">
+						{{contact.fname}} {{contact.lname}}
+					</a>
+				</th>
+				<th>{{contact.tel}}</th>
+			</tr>
+		</tbody>
+	</table>
+
+</div>

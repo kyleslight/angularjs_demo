@@ -1,6 +1,11 @@
 .todoDemo{
-	width: 900px;
+	/*width: 900px;*/
 }
+
+div.list-group-item, div.list-group-item.disabled:hover{
+	cursor: pointer;
+}
+
 
 .done{
 	text-decoration: line-through;

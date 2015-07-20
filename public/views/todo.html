@@ -1,16 +1,18 @@
-<div class="todoDemo" ng-controller="TodoController">
+<div class="todoDemo row" ng-controller="TodoController">
 	<h2>Todo Demo</h2>
-	<form name="frm" class="form-inline">
-		<div class="form-group">
+	<form name="frm" class="">
+		<div class="input-group">
 			<input type="text" class="form-control" name="newTodo" ng-model="newTodo" placeholder="Add a new todo" required>
+			<span class="input-group-btn">
+				<button class="btn btn-primary" ng-click="addTodo()" ng-disabled="frm.$invalid">Go !</button>
+				<button class="btn btn-primary" ng-click="clearComplete()">Clear Complete !</button>
+			</span>
 		</div>
-		<button class="btn btn-primary" ng-click="addTodo()" ng-disabled="frm.$invalid">Go!</button>
-		<button class="btn btn-primary" ng-click="clearComplete()">Clear Complete!</button>
 	</form>
 
 	<dic class="container">
 		<div class="list-group">
-			<div type="button" ng-class="{'disabled': todo.done}" ng-repeat="todo in todos" class="list-group-item">			
+			<div type="button" ng-class="{'disabled': todo.done}" ng-repeat="todo in todos" class="list-group-item" ng-click="toggleDone($index)">			
 				<input type="checkbox" ng-model="todo.done">
 				<span ng-class="{'done': todo.done}">{{todo.title}}</span>
 			</div>
