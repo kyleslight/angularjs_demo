@@ -18,6 +18,10 @@ todoApp.config(function ($routeProvider, $locationProvider) {
 			templateUrl: 'views/detail.html',
 			controller: 'DetailController'
 		})
+		.when('/basicEvent', {
+			templateUrl: 'views/basicEvent.html',
+			controller: 'BasicEventController'
+		})
 		.otherwise({ redirectTo: '/' });
 
 	// $locationProvider

@@ -38,8 +38,11 @@ todoApp.controller({
 	},
 	'DetailController': function($scope, $http, $routeParams){
 		$http.get('/fakedata/contacts.js').success(function(data){
-			// $scope.contacts = data;
 			$scope.contact = data[$routeParams.id];
 		});
+	},
+	'BasicEventController': function($scope){
+		$scope.astate = "NO EVENT";
+		$scope.bstate = "NO ENENT";
 	}
 })

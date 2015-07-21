@@ -1,0 +1,23 @@
+<div class="row basic-event-demo">
+	<h2>Basic Event Demo</h2>
+	<textarea class="form-control"
+		ng-focus="astate='FOCUS'"
+		ng-blur="astate='BLUR'"
+		ng-keypress="astate='KEY PRESSED'"
+		ng-copy="astate='COPIED'"
+		ng-cut="astate='CUT'"
+		ng-paste="astate='PASTED'"
+		width="700px"
+	rows="10"></textarea>
+	<h4><span class="label label-default">{{astate}}</span></h4>
+
+	<hr>
+	<button 
+		ng-mouseover="bstate='MOUSE OVER'"
+		ng-mouseleave="bstate='MOUSE LEAVE'"
+		ng-click="bstate='CLICK'"
+		ng-dblclick="bstate='DOUBLE CLICK'"
+	class="btn btn-primary">Click Me !</button>	
+	<h4><span class="label label-default">{{bstate}}</span></h4>
+
+</div>
