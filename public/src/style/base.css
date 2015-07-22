@@ -1,5 +1,9 @@
-.todoDemo{
-	/*width: 900px;*/
+a{
+	cursor: pointer;
+}
+
+a[ng-click]{
+    cursor: pointer;
 }
 
 div.list-group-item, div.list-group-item.disabled:hover{

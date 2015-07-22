@@ -1,0 +1,40 @@
+<div class="row watchDemo" ng-controller="WatchController">
+	<h2>Watch Demo</h2>
+	<hr>
+	<!-- <select ng-model="currentPage" ng-options="n for n in [5, 10, 15, 20]"></select> -->
+	<ul class="pagination">
+    	<li ng-class="{disabled: disablePrev}" ng-click="goPrev()">
+      		<a aria-label="Previous">
+        		<span aria-hidden="true">&laquo;</span>
+      		</a>
+    	</li>
+    	<li ng-class="{active: page == currentPage}" ng-repeat="page in currentList" ng-click="setPage(page)"><a>{{ page }}</a></li>
+	    <li ng-click="goNext()">
+      		<a aria-label="Next">
+        		<span aria-hidden="true">&raquo;</span>
+      		</a>
+    	</li>
+  	</ul>
+	<table class="table table-default">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Tel</th>
+				<th>Address</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="person in people">
+				<th>{{person.fname}} {{person.lname}}</th>
+				<th>{{person.tel}}</th>
+				<th>{{person.address}}</th>
+				<th>{{person.city}}</th>
+				<th>{{person.state}}</th>
+				<th>{{person.zip}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,43 @@
+<div class="row ngclassDemo">
+	<h2>Ng-class Demo</h2>
+	<hr>
+	<style>
+		.blue{
+			color: blue;
+		}
+		.red{
+			color: red;
+		}
+		.green{
+			color: green;
+		}
+		.underline{
+			text-decoration: underline;
+		}
+		b{
+			margin: 5px;
+		}
+	</style>
+
+	<div class="list-group">
+		<b class="list-group-item" ng-class="[style1, style2]" ng-repeat="item in items">
+			{{item.title}}
+		</b>
+	</div>
+
+	<hr>
+
+	<div class="list-group">
+		<b class="list-group-item" ng-class="{red: item.type == 1, blue: item.type == 2}" ng-repeat="item in items">
+			{{item.title}}
+		</b>
+	</div>
+
+	<hr>
+
+	<div class="list-group">
+		<b class="list-group-item" ng-class="map_style[item.type]" ng-repeat="item in items">
+			{{item.title}}
+		</b>
+	</div>
+</div>

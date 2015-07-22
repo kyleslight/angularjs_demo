@@ -1,0 +1,17 @@
+<div class="row switchDemo">
+    <h2>Switch Demo</h2>
+    <hr>
+
+    <input type="text" class="form-control" ng-model="color">
+
+    <div ng-switch on="color">
+        <div ng-switch-when="red" style="color:{{color}}">
+            <h3>RED</h3></div>
+        <div ng-switch-when="green" style="color:{{color}}">
+            <h3>GREEN</h3></div>
+        <div ng-switch-when="blue" style="color:{{color}}">
+            <h3>BLUE</h3></div>
+        <div ng-switch-default style="color:{{color}}">
+            <h3>COLOR</h3></div>
+    </div>
+</div>
