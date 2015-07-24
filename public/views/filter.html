@@ -1,0 +1,41 @@
+<div class="row customFilterDemo">
+	<h2>Custom Filter Demo</h2>
+	<hr>
+
+	<form name="frm" class="">
+		<div class="input-group">
+			<input type="text" class="form-control" ng-model="search" placeholder="Search in Salemen" required>
+			<span class="input-group-btn">
+  				<button type="button" class="btn btn-primary">Search</button>
+  				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a>All</a></li>
+				    <li><a>Name</a></li>
+				    <li><a>ID</a></li>
+				</ul>
+			</span>
+		</div>
+	</form>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Titles</th>
+				<th>Url</th>
+				<th>Thumbnail</th>
+				<th>ID</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr ng-repeat="new in news | orderBy: 'id' | filter: search">
+				<th>{{new.title}}</th>
+				<th>{{new.url}}</th>
+				<th><a href="http://www.baidu.com"><img src="{{new.thumbnail}}"></a></th>
+				<th>{{new.id}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>

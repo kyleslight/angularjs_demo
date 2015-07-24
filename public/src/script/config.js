@@ -1,6 +1,6 @@
-var todoApp = angular.module('TodoApp', ['ngRoute']);
+var angularDemoApp = angular.module('AngularDemoApp', ['ngRoute']);
 
-todoApp.config(function($routeProvider, $locationProvider) {
+angularDemoApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'views/main.html',
@@ -32,6 +32,10 @@ todoApp.config(function($routeProvider, $locationProvider) {
         .when('/watch', {
         	templateUrl: 'views/watch.html',
         	controller: 'WatchController'
+        })
+        .when('/filter', {
+        	templateUrl: 'views/filter.html',
+        	controller: 'FilterController'
         })
         .otherwise({
             redirectTo: '/'
