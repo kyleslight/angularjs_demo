@@ -33,7 +33,7 @@ angularDemoApp.service({
         }
     },
     'ChatService': function ($rootScope) {
-        var socket = io();
+        var socket = io.connect();
 
         this.receiveChat = function (eventName, callback) {
             socket.on(eventName, function () {
