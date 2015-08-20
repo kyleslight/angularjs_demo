@@ -3,7 +3,6 @@ var app = express();
 var mongoJs = require('mongojs');
 var bodyParser = require('body-parser');
 var server = require('http').createServer(app);
-var io = require('socket.io').listen(server);
 var db = mongoJs('contactlist', ['contactlist']);
 
 app.use(express.static(__dirname + '/public'));
@@ -59,6 +58,7 @@ server.listen(3000, function () {
 });
 
 //handle Chat
+var io = require('socket.io').listen(server);
 io.on('connection', function (socket) {
     socket.on('chat', function(chat) {
         console.log(chat);
