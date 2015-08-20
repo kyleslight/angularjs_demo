@@ -15,3 +15,64 @@ div.list-group-item, div.list-group-item.disabled:hover{
 	text-decoration: line-through;
 	color: #AAA;
 }
+
+.inline-element {
+    display: inline;
+}
+
+.name-info {
+    height: 50px;
+    padding-left: 15px;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.chat-contact-wrap input.chat-contact {
+    height: 50px;
+    padding-left: 15px;
+    border-left: 0;
+}
+
+.chatWrap {
+    margin-top: 20px;
+}
+
+.send-chat {
+    width: 100%;
+    height: 50px;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+.person-info {
+    width: 60px;
+    padding-left: 0;
+    margin-right: 22px;
+}
+
+.person-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.person-name {
+    color: #AAA;
+}
+
+.chat-box-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.no-padding-element-left {
+    padding-left: 0;
+}
+
+.no-padding-element-right {
+    padding-right: 0;
+}
+
+.float-element {
+    float: left;
+}

@@ -14,6 +14,10 @@ angularDemoApp.config(function($routeProvider, $locationProvider) {
             templateUrl: 'views/contact.html',
             controller: 'ContactController'
         })
+        .when('/chat', {
+            templateUrl: 'views/chat.html',
+            controller: 'ChatController'
+        })
         .when('/detail/:id', {
             templateUrl: 'views/detail.html',
             controller: 'DetailController'
@@ -36,6 +40,10 @@ angularDemoApp.config(function($routeProvider, $locationProvider) {
         .when('/filter', {
         	templateUrl: 'views/filter.html',
         	controller: 'FilterController'
+        })
+        .when('/trans', {
+            templateUrl: 'views/trans.html',
+            controller: 'TransController'
         })
         .otherwise({
             redirectTo: '/'

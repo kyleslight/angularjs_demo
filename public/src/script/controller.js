@@ -31,10 +31,69 @@ angularDemoApp.controller({
             })
         };
     },
-    'ContactController': function($scope, $http) {
-        $http.get('/fakedata/contacts.js').success(function(data) {
-            $scope.contacts = data;
-        });
+    'ContactController': function($scope, ContactService) {
+
+        var refresh = function () {
+            ContactService.getContact().then(function (data) {
+                $scope.contacts = data;
+                $scope.isEdit = false;
+            });
+        };
+
+        refresh();
+
+        $scope.isEdit = false;
+
+        $scope.addContact = function (contact) {
+            ContactService.postContact(contact).then(function (data) {
+                $scope.contacts.push(data);
+                $scope.contact = {};
+            });
+        };
+
+        $scope.removeContact = function (_id) {
+            ContactService.removeContact(_id).then(function (data) {
+                refresh();
+            });
+        };
+
+        $scope.editContact = function (contactItem) {
+            $scope.contact = {
+                name: contactItem.name,
+                tel: contactItem.tel,
+                email: contactItem.email,
+                _id: contactItem._id
+            };
+            $scope.isEdit = true;
+        };
+
+        $scope.cancelEdit = function () {
+            $scope.isEdit = false;
+        };
+
+        $scope.modifyContact = function () {
+            ContactService.modifyContact($scope.contact).then(function (data) {
+                $scope.contact = {};
+                refresh();
+            });
+        }
+    },
+    'ChatController': function ($scope, ChatService) {
+        $scope.chats = [];
+        var randID = Math.floor(Math.random()*4 + 1);
+        console.log()
+        $scope.send = function (name, chatContent) {
+            ChatService.sendChat('chat', {
+                username: name,
+                text: chatContent,
+                timestamp: Date.now(),
+                randID: randID
+            });
+            $scope.chatContent = '';
+        };
+        ChatService.receiveChat('chat', function (data) {
+            $scope.chats.push(data);
+        })
     },
     'DetailController': function($scope, $http, $routeParams) {
         $http.get('/fakedata/contacts.js').success(function(data) {
@@ -162,23 +221,33 @@ angularDemoApp.controller({
         pagination.init(pageLen);
         refreshPeople($scope.currentPage);
 
-
         // $scope.$watch('currentPage', function(newValue, oldValue){
         // 	$scope.switchPage(newValue);
         // });
     },
     'FilterController': function($scope, $http){
-    	$http.get(
-    		'/fakedata/zhihunews.js'
-    	)
-    	.success(function(data){
-    		$scope.news = data;
-    	});
-
+        $http.get(
+          '/fakedata/zhihunews.js'
+    	  ).success(function(data){
+            $scope.news = data;
+        });
         $scope.rule = 'id';
 
-    	$scope.totalMoney = function(user){
-    		return user.sales + user.bouns;
-    	}
+        $scope.totalMoney = function(user){
+          return user.sales + user.bouns;
+        }
+    },
+    'TransController': function ($scope) {
+
+    },
+    'testControllerA': function ($scope, DataFactory) {
+        //$scope.text = 'in A';
+        $scope.data = DataFactory;
+    },
+    'testControllerB': function ($scope, DataFactory) {
+        //$scope.text = 'in B';
+        $scope.data = DataFactory;
     }
+
+
 })
