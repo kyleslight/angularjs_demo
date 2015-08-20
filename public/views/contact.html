@@ -1,21 +1,58 @@
 <div class="routeDemo row" ng-controller="ContactController">
 	<h2>Route Demo</h2>
 
+    <form class="row" ng-submit="addContact(contact)">
+        <span class="col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon">Name</span>
+                <input type="text" class="form-control inline-element" ng-model="contact.name"/>
+            </div>
+        </span>
+        <span class="col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon">Phone</span>
+                <input type="text" class="form-control inline-element" ng-model="contact.tel"/>
+            </div>
+        </span>
+        <span class="col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon">Email</span>
+                <input type="text" class="form-control inline-element" ng-model="contact.email"/>
+            </div>
+        </span>
+        <span class="col-md-3">
+            <div class="input-group">
+                <button ng-if="!isEdit" type="submit" class="btn btn-primary">Add Contact</button>
+                <span ng-if="isEdit">
+                    <button type="button" class="btn btn-warning" ng-click="modifyContact()">Modify Contact</button>
+                    <a ng-click="cancelEdit()">cancel</a>
+                </span>
+            </div>
+        </span>
+    </form>
 	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Name</th>
 				<th>Phone</th>
+                <th>Email</th>
+                <th>Action</th>
 			</tr>
 		</thead>
+
 		<tbody>
 			<tr ng-repeat="contact in contacts">
 				<th>
 					<a href="/#/detail/{{$index}}">
-						{{contact.fname}} {{contact.lname}}
+						{{contact.name}}
 					</a>
 				</th>
 				<th>{{contact.tel}}</th>
+				<th>{{contact.email}}</th>
+                <th>
+                    <button class="btn btn-danger" ng-click="removeContact(contact._id)">Remove</button>
+                    <button class="btn btn-warning" ng-click="editContact(contact)">Edit</button>
+                </th>
 			</tr>
 		</tbody>
 	</table>

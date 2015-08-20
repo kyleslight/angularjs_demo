@@ -30,7 +30,7 @@
 		</thead>
 		<tbody>
 
-			<tr ng-repeat="new in news | orderBy: 'id' | filter: search">
+			<tr ng-repeat="new in news | orderBy: 'title' | filter: search">
 				<th>{{new.title}}</th>
 				<th><a href="{{new.url}}">{{new.url}}</a></th>
 				<th><a href="http://www.baidu.com"><img src="http://i1.tietuku.com/b433af35fa4ee45a.jpg"></a></th>
