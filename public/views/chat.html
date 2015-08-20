@@ -3,13 +3,13 @@
 
     <form name="frm" ng-submit="send(name, chatContent)">
         <div class="input-group row">
-            <div class="float-element col-lg-1 no-padding-element-right">
+            <div class="float-element col-lg-1 col-xs-1 no-padding-element-right">
                 <input type="text" class="form-control name-info" ng-model="name" placeholder="name" required/>
             </div>
-            <div class="chat-contact-wrap float-element no-padding-element-left no-padding-element-right col-lg-9">
+            <div class="chat-contact-wrap float-element no-padding-element-left no-padding-element-right col-lg-9 col-xs-9">
                 <input type="text" class="form-control chat-contact" ng-model="chatContent" placeholder="Input chat content" required/>
             </div>
-            <div class="float-element no-padding-element-left col-lg-2">
+            <div class="float-element no-padding-element-left col-lg-2 col-xs-2">
                 <span class="input-group-btn">
                     <button  type="submit" class="btn btn-primary send-chat" ng-disabled="frm.$invalid">Send</button>
                 </span>
@@ -18,10 +18,10 @@
     </form>
     <div class="chatWrap container">
         <li class="chatbox row list-group-item" ng-repeat="chat in chats | orderBy : 'timestamp' : true">
-            <div class="person-info col-lg-1">
+            <div class="person-info col-lg-1 col-xs-1">
                 <img class="person-image" ng-src="src/images/default{{chat.randID}}.jpg" alt=""/>
             </div>
-            <div class="chat-box-content col-lg-11">
+            <div class="chat-box-content col-lg-11 col-xs-9">
                 <div class="person-name">
                     {{chat.username}}
                 </div>

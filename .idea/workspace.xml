@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37d5016d-9442-426c-9c85-a2899a68dd6f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/chat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/src/script/factory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/src/script/service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/trans.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/style/base.css" afterPath="$PROJECT_DIR$/public/src/style/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/script/config.js" afterPath="$PROJECT_DIR$/public/src/script/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/contact.html" afterPath="$PROJECT_DIR$/public/views/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fakedata/contacts.js" afterPath="$PROJECT_DIR$/public/fakedata/contacts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/script/controller.js" afterPath="$PROJECT_DIR$/public/src/script/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/filter.html" afterPath="$PROJECT_DIR$/public/views/filter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/main.html" afterPath="$PROJECT_DIR$/public/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/ngclass.html" afterPath="$PROJECT_DIR$/public/views/ngclass.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/switch.html" afterPath="$PROJECT_DIR$/public/views/switch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/chat.html" afterPath="$PROJECT_DIR$/public/views/chat.html" />
     </list>
     <ignored path="angularjs_demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/src/script/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4145343">
+            <state vertical-scroll-proportion="0.0">
               <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
               <folding />
             </state>
@@ -89,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chat.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/views/chat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125">
-              <caret line="21" column="81" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.36201468">
+              <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -153,8 +138,8 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/src/script/service.js" />
         <option value="$PROJECT_DIR$/public/src/style/base.css" />
-        <option value="$PROJECT_DIR$/public/views/chat.html" />
         <option value="$PROJECT_DIR$/public/src/script/controller.js" />
+        <option value="$PROJECT_DIR$/public/views/chat.html" />
       </list>
     </option>
   </component>
@@ -578,12 +563,12 @@
       <option name="number" value="Default" />
       <updated>1439865724045</updated>
       <workItem from="1439865725287" duration="3593000" />
-      <workItem from="1439886982328" duration="31290000" />
+      <workItem from="1439886982328" duration="31476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34883000" />
+    <option name="totallyTimeSpent" value="35069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-150" width="1680" height="1050" extended-state="0" />
@@ -821,22 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/src/style/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125">
-          <caret line="21" column="81" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/src/script/service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -847,8 +816,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/src/script/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4145343">
+        <state vertical-scroll-proportion="0.0">
           <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/src/style/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36201468">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
           <folding />
         </state>
       </provider>
