@@ -63,9 +63,9 @@ io.on('connection', function (socket) {
     socket.on('chat', function(chat) {
         console.log(chat);
         io.emit('chat', chat);
-    })
+    });
     io.on('disconnection', function (socket) {
-    })
+    });
 });
 
 
