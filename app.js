@@ -50,7 +50,7 @@ app.put('/modifyContact', function (req, res) {
     });
 });
 
-server.listen(3000, 'localhost', function () {
+var server = app.listen(3000, 'localhost', function () {
     var host = server.address().address;
     var port = server.address().port;
 
