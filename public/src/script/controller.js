@@ -248,6 +248,4 @@ angularDemoApp.controller({
         //$scope.text = 'in B';
         $scope.data = DataFactory;
     }
-
-
 })

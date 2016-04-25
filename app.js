@@ -1,5 +1,6 @@
-var express = require('express');
+var v = require('express');
 var app = express();
+
 var mongoJs = require('mongojs');
 var bodyParser = require('body-parser');
 var server = require('http').createServer(app);
@@ -8,9 +9,20 @@ var db = mongoJs('contactlist', ['contactlist']);
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
-// handle Main
-app.get('/', function(req, res){
+// handle Mainrec
+app.get('/', function (req, res){
     res.sendfile('index.html');
+});
+r
+app.get('/grab', function (req, res) {
+    res.sendfile('./public/grab.html');
+});
+
+app.get('/grabImage', function (req, res) {
+    var data = {
+        imgUrls: ['http://kyleslight.net/static/image/ky.png?v=3946a953126188e00716536dffdcb241', 'http://ww1.sinaimg.cn/large/a51018d9gw1f2isryj7v9j207n04u74a.jpg']
+    };
+    res.json(data);
 });
 
 //handle Contact
@@ -33,6 +45,7 @@ app.delete('/deleteContact/:id', function (req, res) {
         res.json(docs);
     });
 });
+
 app.put('/modifyContact', function (req, res) {
     var contact = req.body;
     db.contactlist.findAndModify({

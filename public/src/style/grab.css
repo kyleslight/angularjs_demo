@@ -1,0 +1,11 @@
+.imageWrap {
+    width: 120px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #CCC;
+    cursor: pointer;
+}
+
+.previewImage {
+    max-width: 100px;
+}

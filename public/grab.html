@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Grab Image</title>
+        <link type="text/css" rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="src/style/grab.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Grab Image</h1>
+            <form id="form">
+                <div class="input-group">
+                    <input type="text" class="form-control" lk-state="query.text" placeholder="http://www.somesite.com" required>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" lk-on="click:fetch">Search</button>
+                    </span>
+                </div>
+            </form>
+        
+            <div id="result">
+                <div class="imageList" lk-for="imgUrl in imgUrls">
+                    <div class="imageWrap">
+                        <a><img class="previewImage" src="http://kyleslight.net/static/image/ky.png?v=3946a953126188e00716536dffdcb241" alt=""></a>
+                        <br><input type="checkbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </table>
+        <script src="lib/liky.js"></script>
+        <script src="src/script/grab.js"></script>
+    </body>
+</html>

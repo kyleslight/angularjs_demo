@@ -76,3 +76,75 @@ div.list-group-item, div.list-group-item.disabled:hover{
 .float-element {
     float: left;
 }
+
+.teWrap {
+    position: relative;
+    height: 600px;
+    background: red;
+    opacity: 0.7;
+}
+
+.content {
+    width:auto;
+    margin: 0 auto;
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+
+.a, .b, .c {
+    height: 200px;
+}
+
+.a {
+    width: 160px;
+    background: red;
+}
+
+.b {
+    width: 600px;
+    background: blue;
+}
+
+.c {
+    width: 160px;
+    background: yellow;
+}
+
+.a1, .b1, .c1 {
+    float: left;
+}
+
+.c2{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.b2{
+    margin-left: 160px;
+    width: auto;
+}
+/*.a2{*/
+    /*float: right;*/
+/*}*/
+
+
+.a3 {
+    position: absolute;
+    top: 0;
+    left: 600px;
+}
+
+.b3 {
+    float: left;
+}
+
+.c3 {
+    position: absolute;
+    top: 0;
+    left: 760px;
+}
+
+.test-container {
+    text-align: center;
+}
